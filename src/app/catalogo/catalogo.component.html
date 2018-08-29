@@ -1,0 +1,11 @@
+<h1>Catalogo</h1>
+<section *ngIf="produto">
+  <app-detalhe [produto]="produto" (voltar)="sairDetalhe($event)"></app-detalhe>
+</section>
+<section *ngIf="!produto">
+  <div class="row">
+    <div *ngFor="let produto of produtos; index as i;" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <app-produtos [produto]="produto" (retornaValorCatalogo)="recebeValorfilho($event)"></app-produtos>
+    </div>
+  </div>
+</section>

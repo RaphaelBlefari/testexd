@@ -1,0 +1,52 @@
+{
+    "name": "vv-catalogo-servicos",
+    "profiles": [
+        "docker"
+    ],
+    "label": null,
+    "version": "9c794c43d87423f9e45ffe6edf3afc04e220eeab",
+    "state": null,
+    "propertySources": [
+        {
+            "name": "http://bitbucket.viavarejo.com.br/scm/lfaj/vv-configuracao.git/vv-catalogo-servicos/vv-catalogo-servicos.yml#docker",
+            "source": {
+                "spring.profiles": "docker",
+                "spring.data.mongodb.uri": "mongodb://mongo-multi001.dc.nova:27017,mongo-multi002.dc.nova:27017,mongo-multi003.dc.nova:27017/catalogo_servicos?replicaset=rsMULT&readPreference=secondaryPreferred",
+                "spring.data.mongodb.repositories.enabled": true,
+                "spring.datasource.url": "jdbc:db2://10.205.0.16:446/DBPMVS",
+                "spring.datasource.driver-class-name": "com.ibm.db2.jcc.DB2Driver",
+                "spring.datasource.username": "PRNSV",
+                "spring.datasource.password": "prd@nsve",
+                "spring.datasource.tomcat.initial-size": 5,
+                "spring.datasource.tomcat.max-active": 50,
+                "signing.key": "dfa394db92b0a007956cf1692cdc6d66",
+                "security.oauth2.resource.userInfoUri": "http://vv-autorizacao:8901/user",
+                "security.oauth2.client.grant-type": "client_credentials",
+                "db2.schema": "PRDBAT",
+                "logging.level.br.com.viavarejo": "ERROR",
+                "catalogo.url": "http://api-jornada.casasbahia.net",
+                "adm.url": "http://api-jornada.casasbahia.net",
+                "carrinho.url": "http://api-jornada.casasbahia.net",
+                "crm.url": "http://api-jornada.casasbahia.net"
+            }
+        },
+        {
+            "name": "http://bitbucket.viavarejo.com.br/scm/lfaj/vv-configuracao.git/vv-catalogo-servicos/vv-catalogo-servicos.yml",
+            "source": {
+                "spring.profiles.active": "local",
+                "server.port": 8087,
+                "management.security.enabled": false
+            }
+        },
+        {
+            "name": "http://bitbucket.viavarejo.com.br/scm/lfaj/vv-configuracao.git/application.yml",
+            "source": {
+                "logging.level.org.springframework.security": "ERROR",
+                "logging.level.org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter": "ERROR",
+                "logging.level.org.hibernate.type": "ERROR",
+                "logging.level.br.com.viavarejo.cicscc.dao": "ERROR",
+                "hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds": 60000
+            }
+        }
+    ]
+}

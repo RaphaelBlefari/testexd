@@ -1,0 +1,46 @@
+<p>
+  geolocalizacao works!
+</p>
+
+<div class="form-group">
+  <label for="file">Escolha Arquivo</label>
+  <input type="file" id="file" (change)="handleFileInput($event.target.files)">
+</div>
+<button type="button" (click)="GeraGlobal();" class="btn btn-default">Gera Global</button>
+<br>
+<span *ngFor="let p of filiais">
+  {{p.ip}},{{p.Pais}},"{{p.Cidade}}","{{p.Estado}} "{{p.Filial}} - {{p.RazaoSocial}}"",{{p.Latitude}},{{p.Longitude}}
+  <br>
+</span>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ip</th>
+      <th>Pais</th>
+      <th>RazaoSocial</th>
+      <th>UF</th>
+      <th>Municipio</th>
+      <th>Filial</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Razao Social</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of filiais">
+      <td>{{p.ip}}
+        <button type="button" (click)="retornaGeolocalizacao(p);" class="btn btn-default">button</button>
+      </td>
+      <td>{{p.Pais}}</td>
+      <td>{{p.Regiao}}</td>
+      <td>{{p.Cidade}}</td>
+      <td>{{p.Estado}}</td>
+      <td>{{p.Filial}}</td>
+      <td>{{p.Latitude}}</td>
+      <td>{{p.Longitude}}</td>
+      <td>{{p.RazaoSocial}}</td>
+    </tr>
+  </tbody>
+</table>

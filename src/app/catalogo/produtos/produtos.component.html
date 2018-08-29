@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  <a [routerLink]="['']">
+    <img class="card-img-top img-responsive" src="http://www.adesaoetiquetas.com.br/adm/wp-content/uploads/2015/04/rotulos-750x500.jpg"
+      alt="Card image cap">
+  </a>
+  <div class="card-body">
+    <h5 class="card-title">{{teste}}{{produto.Nome}} - {{produto.Marca}}</h5>
+    <p class="card-text">{{produto.Valor | currency:'R$'}}</p>
+    <button type="button" (click)="feedback(total)" class="btn btn-default">Comprar</button>
+  </div>
+</div>
