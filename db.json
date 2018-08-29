@@ -17,6 +17,10 @@
       "Nome": "TV 75 LED",
       "Marca": "LG",
       "Valor": 4700
+    },
+    {
+      "carrinhoId": "1",
+      "id": 4
     }
   ],
   "Carrinhos": [
@@ -31,42 +35,6 @@
           "Valor": 4700
         },
         {
-          "id": 2,
-          "Nome": "Galaxy 7",
-          "Marca": "Apple",
-          "Valor": 1900
-        },
-        {
-          "id": 2,
-          "Nome": "Galaxy 7",
-          "Marca": "Apple",
-          "Valor": 1900
-        },
-        {
-          "id": 3,
-          "Nome": "TV 75 LED",
-          "Marca": "LG",
-          "Valor": 4700
-        },
-        {
-          "id": 3,
-          "Nome": "TV 75 LED",
-          "Marca": "LG",
-          "Valor": 4700
-        },
-        {
-          "id": 3,
-          "Nome": "TV 75 LED",
-          "Marca": "LG",
-          "Valor": 4700
-        },
-        {
-          "id": 3,
-          "Nome": "TV 75 LED",
-          "Marca": "LG",
-          "Valor": 4700
-        },
-        {
           "id": 3,
           "Nome": "TV 75 LED",
           "Marca": "LG",
@@ -113,36 +81,6 @@
           "Nome": "Iphone 8",
           "Marca": "Apple",
           "Valor": 2300
-        },
-        {
-          "id": 1,
-          "Nome": "Iphone 8",
-          "Marca": "Apple",
-          "Valor": 2300
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "Total": 4700,
-      "Produtos": [
-        {
-          "id": 3,
-          "Nome": "TV 75 LED",
-          "Marca": "LG",
-          "Valor": 4700
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "Total": 4700,
-      "Produtos": [
-        {
-          "id": 3,
-          "Nome": "TV 75 LED",
-          "Marca": "LG",
-          "Valor": 4700
         }
       ]
     },

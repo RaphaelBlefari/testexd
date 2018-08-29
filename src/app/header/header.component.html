@@ -27,8 +27,12 @@
           <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-          <li *ngFor="let produto of carrinho?.Produtos">
-            <a>{{produto.Marca}} R$ {{produto.Valor}}</a><a (click)="deletaCarrinho(produto)">Deletar</a>
+          <li>
+            <a (click)="limpaProdutosCarrinho()">Limpa Carrinho</a>
+          </li>
+          <li *ngFor="let produto of carrinho?.Produtos , let i = index">
+            <a>{{produto.Marca}} R$ {{produto.Valor}}</a>
+            <a (click)="deletaCarrinho(produto,i)">Deletar</a>
           </li>
         </ul>
       </li>

@@ -4,6 +4,7 @@ import { API_URL } from '../../../environments/API_URL';
 import { Observable } from 'rxjs/Observable';
 import { Carrinho } from './carrinho-model';
 import { Subject } from 'rxjs/Subject';
+import { Produto } from '../produto/produto.model';
 
 @Injectable()
 export class CarrinhoService {
@@ -29,9 +30,13 @@ export class CarrinhoService {
   }
 
   DeletaItemCarrinho(carrinho: Carrinho) {
-    return this.http.delete(`${API_URL}/carrinhos/${carrinho}`);
+    return this.http.put(`${API_URL}/carrinhos/${carrinho.id}`, carrinho);
   }
 
+  LimpaProdutosCarrinho(carrinho: Carrinho) {
+    carrinho.Produtos = new Produto[''];
+    return this.http.put<Carrinho>(`${API_URL}/carrinhos/${carrinho.id}`, carrinho);
+  }
 
   AtualizaCarrinho(carrinho) {
     this.SubjectCarrinho.next(carrinho);
